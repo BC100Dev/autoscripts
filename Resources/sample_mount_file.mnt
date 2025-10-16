@@ -1,0 +1,10 @@
+# One file controls one separate block device for the mount control
+# The filesystem needs to be explicit; this cannot be detected automatically
+# Use "blkid" to figure out the partition type
+# An example is given by something like this (change for your specific needs):
+
+BlockDevice = deb_root
+FindBlockVia = LABEL
+MountPoint = /mnt
+FilesystemType = ext4
+Options = ro
